@@ -7,6 +7,9 @@ This project was created with the purpose of developing a tool that allows you t
 
 Allowing to create, cross off, delete and edit the added tasks.
 
+📌 To access the application, enter the following link 
+👉 [toDo_List](https://pandartist93.github.io/ToDo_List/) 🗒
+
 ***
 <div align="center">
 
