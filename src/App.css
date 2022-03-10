@@ -7,11 +7,18 @@
 } 
 
 body {
-	background: linear-gradient(
+	background-image: linear-gradient(to top, #fcc5e4 0%, /* #fda34b 15%, #ff7882 35%, */ #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+	/* background: linear-gradient(
 		90deg,
 		rgba(48, 16, 255, 1) 0%,
-		rgba(100, 115, 255, 1) 100%
-	);
+		rgba(100, 115, 255, 1) 100% 		
+	); */
+}
+
+.todo-view {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 .todo-app {
@@ -20,7 +27,13 @@ body {
 	justify-content: start;
 	width: 520px;
 	min-height: 600px;
-	background: #161a2b;
+	height: auto;
+	/* background: #a8a8b42c; */
+	background: linear-gradient(
+		90deg,
+		rgba(206, 206, 216, 0.514) 0%,
+		rgba(209, 211, 223, 0.192) 100%
+	);
 	text-align: center;
 	margin: 128px auto;
 	border-radius: 10px;
@@ -45,7 +58,8 @@ h1 {
 .todo-input {
 	padding: 14px 32px 14px 16px;
 	border-radius: 4px 0 0 4px;
-	border: 2px solid #5d0cff;
+	/* border: 2px solid #a089cf; */
+	border: 2px solid #4c1ea7;
 	outline: none;
 	width: 320px;
 	background: transparent;
@@ -62,24 +76,27 @@ h1 {
 	border-radius: 0 4px 4px 0;
 	cursor: pointer;
 	outline: none;
-	background: linear-gradient(
+	background: #4c1ea7;
+	/* background: linear-gradient(
 			90deg,
 			rgba(93, 12, 255, 1) 0%,
 			rgba(155, 0, 250, 1) 100%
-	);
+	); */
 	color: #fff;
 	text-transform: capitalize;
+	/* 	background: linear-gradient(to top, #c8699e 52%, #8869b4 81%);*/	
+	
 }
   
-.todo-input.edit {
+/* .todo-input.edit {
 	border: 2px solid #149fff;
-}
+} */
   
 .todo-button.edit {
 	background: linear-gradient(
 		90deg,
-		rgba(20, 159, 255, 1) 0%,
-		rgba(17, 122, 255, 1) 100%
+		rgb(107, 166, 207) 0%,
+		rgb(57, 107, 173) 100%
 	);
 	padding: 16px 22px;
 }
@@ -88,9 +105,11 @@ h1 {
 	display: flex;
 	flex-direction: row;
 	position: relative;
+	
 }
   
 .todo-row {
+	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -98,12 +117,20 @@ h1 {
 	color: #fff;
 	background: linear-gradient(
 		90deg,
-		rgba(255, 118, 20, 1) 0%,
-		rgba(255, 84, 17, 1) 100%
+		rgb(223, 135, 73) 0%,
+		rgb(219, 99, 52) 100%
+	
 	);  
 	padding: 16px;
 	border-radius: 5px;
-	width: 90%;
+	width: 80%;
+}
+
+.todo-note {
+	width: auto;
+	display: flex;
+	height: auto;
+	margin-right: 5px;
 }
   
 .todo-row:nth-child(4n + 1) {
@@ -117,8 +144,8 @@ h1 {
 .todo-row:nth-child(4n + 2) {
 	background: linear-gradient(
 		90deg,
-		rgba(255, 12, 241, 1) 0%,
-		rgba(250, 0, 135, 1) 100%
+		rgb(199, 81, 193) 0%,
+		rgb(247, 77, 168) 100%
 	);
 }
   
@@ -141,7 +168,15 @@ h1 {
 	margin-right: 5px;
 	color: #fff;
 }
+
+.delete-icon:hover {
+	color: rgb(17, 17, 17);
+}
   
 .edit-icon {
 	color: #fff;
+}
+
+.edit-icon:hover {
+	color: rgb(17, 17, 17);
 }
